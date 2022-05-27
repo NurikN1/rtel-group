@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/NurikN1/rtel-group/static/css/main.1a27bec0.css",
-    "main.js": "/NurikN1/rtel-group/static/js/main.b12386e9.js",
-    "static/media/vsegda-na-svazi.jpg": "/NurikN1/rtel-group/static/media/vsegda-na-svazi.cd9b240589a1196e942f.jpg",
-    "static/media/rtel-bolshe-chem-prosto-comp.jpg": "/NurikN1/rtel-group/static/media/rtel-bolshe-chem-prosto-comp.51db8c184bd329fef917.jpg",
-    "static/media/1520.png": "/NurikN1/rtel-group/static/media/1520.2c87b37ee78980fcde5f.png",
-    "static/media/hytera.png": "/NurikN1/rtel-group/static/media/hytera.c2dc3e2a0203c885a0ea.png",
-    "static/media/prof-oper-svaz-budushego.jpg": "/NurikN1/rtel-group/static/media/prof-oper-svaz-budushego.91728a4ab5288221073b.jpg",
-    "static/media/bg-main.jpg": "/NurikN1/rtel-group/static/media/bg-main.75b8980756546c62e5b8.jpg",
-    "static/media/hp.png": "/NurikN1/rtel-group/static/media/hp.b02695a5f47f631d116f.png",
-    "static/media/transtelesoft.png": "/NurikN1/rtel-group/static/media/transtelesoft.6888f4afc8c7728899f7.png",
-    "static/media/ktz.png": "/NurikN1/rtel-group/static/media/ktz.45705a7a267f65e629d7.png",
-    "static/media/kz.svg": "/NurikN1/rtel-group/static/media/kz.b4cca5efe7e80d6b263b207a5251910f.svg",
-    "static/media/poc.svg": "/NurikN1/rtel-group/static/media/poc.cbfa63907033fbd7f25d67658bb9b893.svg",
-    "static/media/tetra.svg": "/NurikN1/rtel-group/static/media/tetra.e29e33ed47df757ca4d2742e8ecaf7a5.svg",
-    "index.html": "/NurikN1/rtel-group/index.html",
-    "static/media/ru.svg": "/NurikN1/rtel-group/static/media/ru.bfcf78f5e1dbe82b6947506aa4765577.svg",
-    "main.1a27bec0.css.map": "/NurikN1/rtel-group/static/css/main.1a27bec0.css.map",
-    "main.b12386e9.js.map": "/NurikN1/rtel-group/static/js/main.b12386e9.js.map"
+    "main.css": "/rtel-group/static/css/main.4d3d9004.css",
+    "main.js": "/rtel-group/static/js/main.31f9bc9c.js",
+    "static/media/vsegda-na-svazi.jpg": "/rtel-group/static/media/vsegda-na-svazi.cd9b240589a1196e942f.jpg",
+    "static/media/rtel-bolshe-chem-prosto-comp.jpg": "/rtel-group/static/media/rtel-bolshe-chem-prosto-comp.51db8c184bd329fef917.jpg",
+    "static/media/1520.png": "/rtel-group/static/media/1520.2c87b37ee78980fcde5f.png",
+    "static/media/hytera.png": "/rtel-group/static/media/hytera.c2dc3e2a0203c885a0ea.png",
+    "static/media/prof-oper-svaz-budushego.jpg": "/rtel-group/static/media/prof-oper-svaz-budushego.91728a4ab5288221073b.jpg",
+    "static/media/bg-main.jpg": "/rtel-group/static/media/bg-main.75b8980756546c62e5b8.jpg",
+    "static/media/hp.png": "/rtel-group/static/media/hp.b02695a5f47f631d116f.png",
+    "static/media/transtelesoft.png": "/rtel-group/static/media/transtelesoft.6888f4afc8c7728899f7.png",
+    "static/media/ktz.png": "/rtel-group/static/media/ktz.45705a7a267f65e629d7.png",
+    "static/media/kz.svg": "/rtel-group/static/media/kz.b4cca5efe7e80d6b263b207a5251910f.svg",
+    "static/media/poc.svg": "/rtel-group/static/media/poc.cbfa63907033fbd7f25d67658bb9b893.svg",
+    "static/media/tetra.svg": "/rtel-group/static/media/tetra.e29e33ed47df757ca4d2742e8ecaf7a5.svg",
+    "index.html": "/rtel-group/index.html",
+    "static/media/ru.svg": "/rtel-group/static/media/ru.bfcf78f5e1dbe82b6947506aa4765577.svg",
+    "main.4d3d9004.css.map": "/rtel-group/static/css/main.4d3d9004.css.map",
+    "main.31f9bc9c.js.map": "/rtel-group/static/js/main.31f9bc9c.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a27bec0.css",
-    "static/js/main.b12386e9.js"
+    "static/css/main.4d3d9004.css",
+    "static/js/main.31f9bc9c.js"
   ]
 }
