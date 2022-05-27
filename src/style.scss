@@ -1,0 +1,23 @@
+.tetra {
+  &__hero {
+    background-image: url('https://www.hytera.ru/upload/resize_cache/webp/iblock/c2e/c2e8969ca404abd05b847606685ddd28.webp');
+  }
+}
+.poc {
+  &__hero {
+    background-image: url('https://www.hytera.ru/upload/resize_cache/webp/iblock/f49/f49c70bbc5cee9f596f22a7df5c30fbe.webp');
+  }
+}
+
+.custom-popup {
+  .mapboxgl-popup {
+    &-content {
+    }
+    &-close-button {
+      display: none;
+    }
+  }
+  .title {
+    font-size: 16px;
+  }
+}
