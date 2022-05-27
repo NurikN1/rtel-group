@@ -27,6 +27,7 @@ const Projects = () => {
 
   useEffect(async () => {
     if (map.current) return; // initialize map only once
+
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/dark-v10',

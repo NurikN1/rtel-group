@@ -10,22 +10,24 @@ const Popup = ({ marker, language, isAuthorized, handleDeleteMarker }) => {
       <ul>
         {marker[`equipments_${language}`].map((equipment) => (
           <li key={equipment.text}>
-            <Link
-              to={equipment.link}
+            <a
+              href={equipment.link}
               className="text-blue-800 hover:underline outline-none"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {equipment.text}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
       <h4 className="text-base text-gray-800">Решения:</h4>
-      <Link
-        to={marker[`solution_${language}`].link}
+      <a
+        href={marker[`solution_${language}`].link}
         className="text-blue-800 hover:underline outline-none"
-        target="_blank">
+        target="_blank"
+        rel="noreferrer">
         {marker[`solution_${language}`].text}
-      </Link>
+      </a>
       {isAuthorized && (
         <div className="flex justify-end space-x-2">
           <Link to={`/edit-marker/${marker.name}`} target="_blank">
