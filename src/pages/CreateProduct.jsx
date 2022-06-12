@@ -14,6 +14,7 @@ import {
 } from '@mui/material';
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore/lite';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import CharacteristicsTab from '../components/CharacteristicsTab';
 import TabPanel from '../components/TabPanel';
@@ -29,23 +30,23 @@ function a11yProps(index) {
 
 const CATEGORIES = [
   {
-    name: 'TETRA системы',
+    name: 'createProduct.category.tetraSystems',
     value: 'tetra-systems',
   },
   {
-    name: 'Система двунаправленных усилителей радиосигнала BDA',
-    value: 'bda-systems',
-  },
-  {
-    name: 'TETRA терминалы',
+    name: 'createProduct.category.tetraTerminals',
     value: 'tetra-terminals',
   },
   {
-    name: 'Системы PoC',
+    name: 'createProduct.category.bda',
+    value: 'bda-systems',
+  },
+  {
+    name: 'createProduct.category.pocSystems',
     value: 'poc-systems',
   },
   {
-    name: 'Терминалы РоС',
+    name: 'createProduct.category.pocTerminals',
     value: 'poc-terminals',
   },
 ];
@@ -67,6 +68,7 @@ const CreateProduct = ({
   initialCharacteristics = [],
 }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const [categoryName, setCategoryName] = useState(initialCategoryName);
   const [value, setValue] = useState(0);
@@ -196,33 +198,32 @@ const CreateProduct = ({
 
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-            <Tab label="Основная информация" {...a11yProps(0)} />
-            <Tab label="Характеристики" {...a11yProps(1)} />
+            <Tab label={t('createProduct.mainInfo')} {...a11yProps(0)} />
+            <Tab label={t('createProduct.characteristics')} {...a11yProps(1)} />
           </Tabs>
         </Box>
 
         <TabPanel value={value} index={0}>
           <div>
             <FormControl fullWidth sx={{ marginBottom: '16px' }}>
-              <InputLabel id="demo-multiple-name-label">Category</InputLabel>
+              <InputLabel id="demo-multiple-name-label">Категория</InputLabel>
               <Select
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={categoryName}
-                label="Age"
+                label="Категория"
                 onChange={(e) => setCategoryName(e.target.value)}>
                 {CATEGORIES.map((category) => (
                   <MenuItem value={category.value} key={category.value}>
-                    {category.name}
+                    {t(category.name)}
                   </MenuItem>
                 ))}
               </Select>
             </FormControl>
-
             <TextField
               sx={{ marginBottom: '16px' }}
               fullWidth
-              label="Название"
+              label={t('createProduct.name')}
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -231,7 +232,7 @@ const CreateProduct = ({
                 className="p-2 mb-4 w-full border border-gray-300 rounded-lg"
                 aria-label="minimum height"
                 minRows={2}
-                placeholder="Subtitle"
+                placeholder={`${t('createProduct.subtitle')}(рус)`}
                 style={{ width: '100%' }}
                 value={subtitleRu}
                 onChange={(e) => setSubtitleRu(e.target.value)}
@@ -240,47 +241,45 @@ const CreateProduct = ({
                 className="p-2 mb-4 w-full border border-gray-300 rounded-lg"
                 aria-label="minimum height"
                 minRows={2}
-                placeholder="Subtitle"
+                placeholder={`${t('createProduct.subtitle')}(қаз)`}
                 style={{ width: '100%' }}
                 value={subtitleKz}
                 onChange={(e) => setSubtitleKz(e.target.value)}
               />
             </div>
-
             <div>
-              <Typography sx={{ marginBottom: '8px' }}>Картинки</Typography>
+              <Typography sx={{ marginBottom: '8px' }}>{t('createProduct.images')}</Typography>
               <div className="flex space-x-4">
                 <TextField
                   sx={{ marginBottom: '16px' }}
                   fullWidth
-                  label="Img"
+                  label={t('createProduct.categoryImage')}
                   value={img}
                   onChange={(e) => setImg(e.target.value)}
                 />
                 <TextField
                   sx={{ marginBottom: '16px' }}
                   fullWidth
-                  label="Feature img"
+                  label={t('createProduct.mainImage')}
                   value={featureImg}
                   onChange={(e) => setFeatureImg(e.target.value)}
                 />
               </div>
             </div>
-
             <div>
-              <Typography sx={{ marginBottom: '8px' }}>Описание</Typography>
+              <Typography sx={{ marginBottom: '8px' }}>{t('createProduct.description')}</Typography>
               <div className="flex space-x-4">
                 <TextField
                   sx={{ marginBottom: '8px' }}
                   fullWidth
-                  label="Название описания Ru"
+                  label={`${t('createProduct.descriptionName')}(рус)`}
                   value={descriptionNameRu}
                   onChange={(e) => setDescriptionNameRu(e.target.value)}
                 />
                 <TextField
                   sx={{ marginBottom: '8px' }}
                   fullWidth
-                  label="Название описания Kz"
+                  label={`${t('createProduct.descriptionName')}(қаз)`}
                   value={descriptionNameKz}
                   onChange={(e) => setDescriptionNameKz(e.target.value)}
                 />
@@ -292,7 +291,7 @@ const CreateProduct = ({
                   aria-label="minimum height"
                   minRows={4}
                   maxRows={8}
-                  placeholder="Description Ru"
+                  placeholder={`${t('createProduct.descriptionText')}(рус)`}
                   style={{ width: '100%' }}
                   value={descriptionRu}
                   onChange={(e) => setDescriptionRu(e.target.value)}
@@ -302,7 +301,7 @@ const CreateProduct = ({
                   aria-label="minimum height"
                   minRows={4}
                   maxRows={8}
-                  placeholder="Description Kz"
+                  placeholder={`${t('createProduct.descriptionText')}(қаз)`}
                   style={{ width: '100%' }}
                   value={descriptionKz}
                   onChange={(e) => setDescriptionKz(e.target.value)}
@@ -310,14 +309,14 @@ const CreateProduct = ({
               </div>
             </div>
             <div>
-              <Typography>Особенности</Typography>
+              <Typography>{t('createProduct.features')}</Typography>
               <div className="flex space-x-4">
                 <TextareaAutosize
                   className="p-2 mb-4 w-full border border-gray-300 rounded-lg text-sm"
                   aria-label="minimum height"
                   minRows={4}
                   maxRows={8}
-                  placeholder="Features Ru"
+                  placeholder={`${t('createProduct.text')}(рус)`}
                   style={{ width: '100%' }}
                   value={featuresRu}
                   onChange={(e) => setFeaturesRu(e.target.value)}
@@ -327,7 +326,7 @@ const CreateProduct = ({
                   aria-label="minimum height"
                   minRows={4}
                   maxRows={8}
-                  placeholder="Features Kz"
+                  placeholder={`${t('createProduct.text')}(қаз)`}
                   style={{ width: '100%' }}
                   value={featuresKz}
                   onChange={(e) => setFeaturesKz(e.target.value)}
@@ -352,7 +351,7 @@ const CreateProduct = ({
             }}
             color="success"
             onClick={save}>
-            Сохранить
+            {t('createProduct.save')}
           </Button>
         </div>
       </Container>

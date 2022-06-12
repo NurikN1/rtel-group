@@ -13,6 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import EditProductDialog from './EditProductDialog';
 
 const CharacteristicsTab = ({
@@ -21,6 +22,8 @@ const CharacteristicsTab = ({
   handleRemoveCharacteristic,
   handleEditCharacteristic,
 }) => {
+  const { t } = useTranslation();
+
   const maxId = Math.max(...characteristics.map((c) => c.id)) | 0;
 
   const [nameKz, setNameKz] = useState('');
@@ -87,20 +90,20 @@ const CharacteristicsTab = ({
   return (
     <div className="mb-4">
       <Typography variant="h6" sx={{ marginBottom: '8px' }}>
-        Характеристики
+        {t('createProduct.characteristics')}
       </Typography>
       <div className="flex space-x-4">
         <TextField
           sx={{ marginBottom: '8px' }}
           fullWidth
-          label="Название Ru"
+          label={`${t('createProduct.name')}(рус)`}
           value={nameRu}
           onChange={(e) => setNameRu(e.target.value)}
         />
         <TextField
           sx={{ marginBottom: '8px' }}
           fullWidth
-          label="Название Kz"
+          label={`${t('createProduct.name')}(қаз)`}
           value={nameKz}
           onChange={(e) => setNameKz(e.target.value)}
         />
@@ -112,7 +115,7 @@ const CharacteristicsTab = ({
           aria-label="minimum height"
           minRows={4}
           maxRows={8}
-          placeholder="Characteristics Ru"
+          placeholder={`${t('createProduct.characteristics')}(рус)`}
           style={{ width: '100%' }}
           value={characteristicsRu}
           onChange={(e) => setCharacteristicsRu(e.target.value)}
@@ -122,7 +125,7 @@ const CharacteristicsTab = ({
           aria-label="minimum height"
           minRows={4}
           maxRows={8}
-          placeholder="Characteristics Kz"
+          placeholder={`${t('createProduct.characteristics')}(қаз)`}
           style={{ width: '100%' }}
           value={characteristicsKz}
           onChange={(e) => setCharacteristicsKz(e.target.value)}
@@ -136,7 +139,7 @@ const CharacteristicsTab = ({
           }}
           color="primary"
           onClick={addCharacteristic}>
-          Добавить Характеристику
+          {t('createProduct.addCharacteristic')}
         </Button>
       </div>
       <Divider sx={{ marginY: '16px' }} />
