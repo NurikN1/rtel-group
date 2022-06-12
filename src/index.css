@@ -40,6 +40,9 @@
   object-fit: cover;
 }
 
+.swiper-pagination-bullet {
+  background: #fff !important;
+}
 
 .test {
   color: red;

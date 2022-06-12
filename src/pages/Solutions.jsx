@@ -1,11 +1,12 @@
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { HeaderHeight } from '../variables/variables';
-import 'swiper/css';
-import 'swiper/css/navigation';
 import { Button, Container, Divider, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { Box } from '@mui/system';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const Solutions = () => {
   return (

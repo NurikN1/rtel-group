@@ -3,6 +3,7 @@ import { Container } from '@mui/material';
 import NavbarLink from './NavbarLink';
 import LanguageMenu from './LanguageMenu';
 import { Link } from 'react-router-dom';
+import { isAuthorized } from '../helpers/auth';
 
 const TopBar = () => {
   const { t } = useTranslation();
@@ -15,9 +16,15 @@ const TopBar = () => {
         }}>
         <div className="flex justify-between">
           <ul>
-            <Link to="/login" className="text-white">
-              Войти
-            </Link>
+            {isAuthorized() ? (
+              <Link to="/" className="text-white">
+                Выйти
+              </Link>
+            ) : (
+              <Link to="/login" className="text-white">
+                Войти
+              </Link>
+            )}
           </ul>
           <ul className="flex justify-end space-x-4">
             <NavbarLink linkTo="/legal-info" name={t('navbar.Юринфо')}></NavbarLink>

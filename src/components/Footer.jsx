@@ -36,7 +36,7 @@ const Footer = () => {
             <h5 className="mb-4 text-lg font-medium text-white">Адрес</h5>
             <ul className=" max-w-[240px]">
               <li className="mb-2 text-gray-400">
-                115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236, этаж 3, кабинет №333
+                115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236
               </li>
             </ul>
           </div>
