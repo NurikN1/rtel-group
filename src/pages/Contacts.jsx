@@ -2,9 +2,12 @@ import { useEffect, useRef } from 'react';
 import { Box, Button, Container, Divider, Typography } from '@mui/material';
 import { HeaderHeight } from '../variables/variables';
 import DG from '2gis-maps';
+import { useTranslation } from 'react-i18next';
 
 const Contacts = () => {
   const mapContainer = useRef(null);
+  const { t } = useTranslation();
+
   useEffect(() => {
     const map = DG.map(mapContainer.current, {
       center: [43.212348, 76.898539],
@@ -27,26 +30,25 @@ const Contacts = () => {
             paddingY: '48px',
           }}>
           <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-            КОНТАКТЫ
+            {t('contacts.contacts')}
           </Typography>
           <Divider variant="middle" />
         </Box>
         <div className="flex justify-between p-4 bg-gray-100">
           <div className="flex-1 p-2">
             <Typography variant="subtitle1" sx={{ marginBottom: '16px' }}>
-              АДРЕС ОФИСА RTEL GROUP В КАЗАХСТАНЕ
+              {t('contacts.officeAddress')}
             </Typography>
             <Typography variant="body2" sx={{ marginBottom: '8px' }}>
-              115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236, этаж 3, кабинет №333 Rtl
-              Group
+              {t('contacts.address')}
             </Typography>
             <Typography variant="body2" sx={{ marginBottom: '8px' }}>
-              Телефон: +7 (495) 669-68-90
+              {t('contacts.phone')}: +7 (495) 669-68-90
             </Typography>
             <Typography variant="body2" sx={{ marginBottom: '8px' }}>
-              Email: будет@gmail.kz
+              {t('contacts.email')}: будет@gmail.kz
             </Typography>
-            <Button variant="contained">Связаться с нами </Button>
+            <Button variant="contained">{t('contacts.contactUs')}</Button>
             {/* <Typography variant="subtitle1" sx={{ marginBottom: '16px' }}>
               АДРЕС ШТАБКВАРТИРЫ
             </Typography>

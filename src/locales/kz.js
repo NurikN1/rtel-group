@@ -118,4 +118,13 @@ export const TRANSLATION_KZ = {
     save: 'Сақтау',
     addCharacteristic: 'Сипаттама қосу',
   },
+  contacts: {
+    contacts: 'Байланыстар',
+    officeAddress: 'ҚАЗАҚСТАНДАҒЫ RTEL GROUP КЕҢСЕСІНІҢ МЕКЕН-ЖАЙЫ',
+    address:
+      '115054, Қазақстан, Алматы қ., Бостандық Р., Гагарина 236, 3 қабат, №333 кабинет Rtl Group',
+    phone: '+7 (495) 669-68-90',
+    email: 'Email',
+    contactUs: 'Бізбен хабарласыңыз',
+  },
 };

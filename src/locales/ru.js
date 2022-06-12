@@ -118,4 +118,13 @@ export const TRANSLATION_RU = {
     save: 'Сохранить',
     addCharacteristic: 'Добавить характеристику',
   },
+  contacts: {
+    contacts: 'Контакты',
+    officeAddress: 'АДРЕС ОФИСА RTEL GROUP В КАЗАХСТАНЕ',
+    address:
+      '115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236, этаж 3, кабинет №333 Rtl Group',
+    phone: 'Телефон',
+    email: 'Email',
+    contactUs: 'Связаться с нами',
+  },
 };
