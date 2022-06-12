@@ -66,7 +66,7 @@ const Main = () => {
             </SwiperSlide>
           </Swiper>
         </Container>
-        <div className="flex flex-wrap mb-8">
+        {/* <div className="flex flex-wrap mb-8">
           <div className="w-5/6 sm:w-1/2 p-6">
             <h3 className="text-3xl text-black font-bold leading-none text-center mb-3">
               {t('main.about.title')}
@@ -80,7 +80,7 @@ const Main = () => {
               alt="Company Img"
             />
           </div>
-        </div>
+        </div> */}
         <div>
           <div className="align-middle">
             {/* <Typography align="center" variant="h5" sx={{ marginBottom: '16px' }}>

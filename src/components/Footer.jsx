@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="flex justify-between container mx-auto">
         <div>
           <a href="https://flowbite.com" className="flex flex-col items-center text-white">
-            <img src={logo} alt="Logo" height={36} className="h-[36px]" />
+            <img src={logo} alt="Logo" width={124} />
           </a>
         </div>
         <div className="flex space-x-8">
