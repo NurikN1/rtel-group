@@ -2,14 +2,15 @@ import { Box, Button, Container, Divider, Typography } from '@mui/material';
 import { collection, doc, getDoc, setDoc } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { db } from '../firebase';
-import { isAuthorized } from '../helpers/auth';
 import { HeaderHeight } from '../variables/variables';
 
 const ProductDetail = () => {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+  const isAuthorized = useSelector((state) => state.isAuthorized.value);
 
   const categoryId = useParams().categoryId;
   const productId = useParams().productId;
@@ -165,7 +166,7 @@ const ProductDetail = () => {
           </div>
         </Container>
       </div>
-      {isAuthorized() && (
+      {isAuthorized && (
         <Container
           maxWidth="lg"
           sx={{

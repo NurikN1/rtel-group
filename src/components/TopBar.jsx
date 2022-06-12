@@ -3,10 +3,15 @@ import { Container } from '@mui/material';
 import NavbarLink from './NavbarLink';
 import LanguageMenu from './LanguageMenu';
 import { Link } from 'react-router-dom';
-import { isAuthorized } from '../helpers/auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../slices/isAuthorizedSlice';
 
 const TopBar = () => {
   const { t } = useTranslation();
+
+  const isAuthorized = useSelector((state) => state.isAuthorized.value);
+  const dispatch = useDispatch();
+
   return (
     <div className="py-2 bg-gray-900">
       <Container
@@ -16,10 +21,10 @@ const TopBar = () => {
         }}>
         <div className="flex justify-between">
           <ul>
-            {isAuthorized() ? (
-              <Link to="/" className="text-white">
+            {isAuthorized ? (
+              <button to="/" className="text-white" onClick={() => dispatch(logout())}>
                 Выйти
-              </Link>
+              </button>
             ) : (
               <Link to="/login" className="text-white">
                 Войти

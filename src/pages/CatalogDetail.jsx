@@ -2,10 +2,10 @@ import { Box, Button, Container, Divider, Typography } from '@mui/material';
 import { collection, doc, getDoc, getDocs, setDoc } from 'firebase/firestore/lite';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { db } from '../firebase';
-import { isAuthorized } from '../helpers/auth';
 import { HeaderHeight } from '../variables/variables';
 
 const CATEGORIES = [
@@ -35,8 +35,7 @@ const CatalogDetail = () => {
   const categoryName = useParams().categoryName;
   const [products, setProducts] = useState([]);
   const { t, i18n } = useTranslation();
-
-  const isAuthorize = isAuthorized();
+  const isAuthorized = useSelector((state) => state.isAuthorized.value);
 
   useEffect(async () => {
     // const categories = collection(db, 'categories');
@@ -87,7 +86,7 @@ const CatalogDetail = () => {
               />
             ))}
         </Container>
-        {isAuthorize && (
+        {isAuthorized && (
           <Container
             maxWidth="xl"
             sx={{

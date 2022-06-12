@@ -1,13 +1,15 @@
 import { Alert, Button, Container, TextField, Typography } from '@mui/material';
 import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setIsAuthorized } from '../helpers/auth';
+import { login } from '../slices/isAuthorizedSlice';
 import { HeaderHeight } from '../variables/variables';
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const form = useRef();
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
   const [error, setError] = useState(false);
@@ -20,7 +22,7 @@ const Login = () => {
       }, 3000);
       return;
     }
-    setIsAuthorized(true);
+    dispatch(login());
     navigate('/');
   };
   return (

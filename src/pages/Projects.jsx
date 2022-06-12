@@ -9,7 +9,7 @@ import { collection, deleteDoc, doc, getDocs, query } from 'firebase/firestore/l
 import { db } from '../firebase';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
-import { isAuthorized } from '../helpers/auth';
+import { useSelector } from 'react-redux';
 
 mapboxgl.accessToken =
   'pk.eyJ1Ijoib3NrYXItYWdhIiwiYSI6ImNsMmF2aDlkdDA3NzIza25yZTB6cGlsY3gifQ.Ma1eN-_aYN5AHkewOnTR5A';
@@ -17,7 +17,7 @@ mapboxgl.accessToken =
 const Projects = () => {
   const { t, i18n } = useTranslation();
 
-  const isAuthorize = isAuthorized();
+  const isAuthorized = useSelector((state) => state.isAuthorized.value);
   const mapContainer = useRef(null);
   const map = useRef(null);
 
@@ -43,7 +43,7 @@ const Projects = () => {
       ReactDOM.render(
         <HashRouter>
           <Popup
-            isAuthorized={isAuthorize}
+            isAuthorized={isAuthorized}
             marker={marker}
             language={i18n.language}
             handleDeleteMarker={handleDeleteMarker}
@@ -97,7 +97,7 @@ const Projects = () => {
         <div style={{ height: '520px', width: '100%' }} className="pb-8">
           <div ref={mapContainer} className="map-container" style={{ height: '100%' }} />
         </div>
-        {isAuthorize && (
+        {isAuthorized && (
           <div className="flex justify-end">
             <Button>
               <Link to="/create-marker">Добавить метку</Link>
