@@ -94,73 +94,97 @@ const Main = () => {
           <div>
             <ul className="flex flex-wrap gap-y-8">
               <li className="w-1/3">
-                <div className="w-full h-full flex items-center justify-center">
+                <a
+                  className="w-full h-full flex items-center justify-center"
+                  href="https://railways.kz/"
+                  target="_blank"
+                  rel="noreferrer">
                   <img
                     src={ktzLogo}
                     alt="logo"
                     className="max-h-32 cursor-pointer hover:scale-125 transition-all duration-300"
                   />
-                </div>
+                </a>
                 <Typography align="center" variant="subtitle1">
                   АО «НК «Қазақстан темiр жолы»
                 </Typography>
               </li>
               <li className="w-1/3">
-                <div className="w-full h-full flex items-center justify-center">
+                <a
+                  className="w-full h-full flex items-center justify-center"
+                  href="https://1520signal.ru/"
+                  target="_blank"
+                  rel="noreferrer">
                   <img
                     src={logo1520}
                     alt="logo"
                     className="max-h-24 cursor-pointer hover:scale-125 transition-all duration-300"
                   />
-                </div>
+                </a>
                 <Typography align="center" variant="subtitle1">
                   Группа компаний 1520
                 </Typography>
               </li>
               <li className="w-1/3">
-                <div className="w-full h-full flex items-center justify-center">
+                <a
+                  className="w-full h-full flex items-center justify-center"
+                  href="https://www.hp.com/kz-ru/home.html"
+                  target="_blank"
+                  rel="noreferrer">
                   <img
                     src={hpLogo}
                     alt="logo"
                     className="max-h-32 cursor-pointer hover:scale-125 transition-all duration-300"
                   />
-                </div>
+                </a>
                 <Typography align="center" variant="subtitle1">
                   HP
                 </Typography>
               </li>
               <li className="w-1/3">
-                <div className="w-full h-full flex items-center justify-center">
+                <a
+                  className="w-full h-full flex items-center justify-center"
+                  href="https://btsignalkaz.kz/"
+                  target="_blank"
+                  rel="noreferrer">
                   <img
                     src={btSignalLogo}
                     alt="logo"
                     className="max-h-32 cursor-pointer hover:scale-125 transition-all duration-300"
                   />
-                </div>
+                </a>
                 <Typography align="center" variant="subtitle1">
                   БТ-Сигнал
                 </Typography>
               </li>
               <li className="w-1/3">
-                <div className="w-full h-full flex items-center justify-center">
+                <a
+                  className="w-full h-full flex items-center justify-center"
+                  href="https://www.hytera.ru/"
+                  target="_blank"
+                  rel="noreferrer">
                   <img
                     src={hyteraLogo}
                     alt="logo"
                     className="max-h-24 cursor-pointer hover:scale-125 transition-all duration-300"
                   />
-                </div>
+                </a>
                 <Typography align="center" variant="subtitle1">
                   Hytera
                 </Typography>
               </li>
               <li className="w-1/3">
-                <div className="w-full h-full flex items-center justify-center">
+                <a
+                  className="w-full h-full flex items-center justify-center"
+                  href="https://transtelesoft.com/"
+                  target="_blank"
+                  rel="noreferrer">
                   <img
                     src={transtelesoftLogo}
                     alt="logo"
                     className="max-h-32 cursor-pointer hover:scale-125 transition-all duration-300"
                   />
-                </div>
+                </a>
                 <Typography align="center" variant="subtitle1">
                   Транстелесофт
                 </Typography>
