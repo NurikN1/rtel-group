@@ -1,9 +1,10 @@
 import { Typography } from '@mui/material';
+import raciaIcon from '../assets/images/racia.png';
 
 const Advantage = (props) => {
   return (
     <div className="flex space-x-4 items-start flex-1">
-      <img src="https://www.hytera.ru/local/templates/new/img/svg/ico-prim.svg" />
+      <img src={raciaIcon} className="h-[40px]" />
       <div>
         <Typography
           sx={{
