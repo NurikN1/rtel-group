@@ -157,7 +157,7 @@ export const TRANSLATION_KZ = {
       name: 'Атауы',
       coordinates: 'Координаталары',
       longitude: 'Бойлық',
-      latitude: 'ендік',
+      latitude: 'Ендік',
       submit: 'Сақтау',
     },
   },

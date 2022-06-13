@@ -156,7 +156,7 @@ export const TRANSLATION_RU = {
       name: 'Название',
       coordinates: 'Координаты',
       longitude: 'Долгота',
-      latitude: 'широта',
+      latitude: 'Широта',
       submit: 'Сохранить',
     },
   },
