@@ -204,6 +204,7 @@ export const TRANSLATION_KZ = {
     addNew: 'Жаңасын қосу',
     edit: 'Редакциялау',
     remove: 'Жою',
+    cancel: 'Артқа',
   },
   hyteraHytalk: {
     title: 'Hytera Hytera дегеніміз не?',
@@ -260,5 +261,8 @@ export const TRANSLATION_KZ = {
     'poc-systems': 'PoC жүйелері',
     'poc-terminals': 'PoC Терминалдары',
     'bda-systems': 'BDA екі бағытты радио сигнал күшейткіштер жүйесі',
+  },
+  editForm: {
+    title: 'Сипаттама редакторы',
   },
 };

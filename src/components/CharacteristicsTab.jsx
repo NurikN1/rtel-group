@@ -170,10 +170,10 @@ const CharacteristicsTab = ({
                 variant="contained"
                 color="error"
                 onClick={() => removeCharacteristic(item.id)}>
-                Remove
+                {t('actions.remove')}
               </Button>
               <Button variant="contained" color="primary" onClick={() => handleOpen(item.id)}>
-                Edit
+                {t('actions.edit')}
               </Button>
             </div>
             <Divider sx={{ marginY: '8px' }} />

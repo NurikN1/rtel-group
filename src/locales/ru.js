@@ -204,6 +204,7 @@ export const TRANSLATION_RU = {
     addNew: 'Добавить новый',
     edit: 'Редактировать',
     remove: 'Удалить',
+    cancel: 'Назад',
   },
   hyteraHytalk: {
     title: 'Что такое Hytera Hytera?',
@@ -261,5 +262,8 @@ export const TRANSLATION_RU = {
     'poc-systems': 'Системы PoC',
     'poc-terminals': 'Терминалы PoC',
     'bda-systems': 'Система двунаправленных усилителей радиосигнала BDA',
+  },
+  editForm: {
+    title: 'Редактор характеристики',
   },
 };

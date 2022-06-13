@@ -9,12 +9,14 @@ import {
   TextField,
 } from '@mui/material';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getMappedRows } from '../helpers/mapping';
 
 const EditProductDialog = ({ open, handleClose, characteristic, handleEdit }) => {
   if (!characteristic) {
     return <div></div>;
   }
+  const { t } = useTranslation();
 
   const getCharacteristicText = (rows) => {
     return rows.map((row) => `${row.key}**${row.value}`).join('\n');
@@ -53,20 +55,20 @@ const EditProductDialog = ({ open, handleClose, characteristic, handleEdit }) =>
 
   return (
     <Dialog open={open} fullWidth={true} maxWidth="md">
-      <DialogTitle>From EditDialog</DialogTitle>
+      <DialogTitle>{t('editForm.title')}</DialogTitle>
       <DialogContent>
         <div className="flex space-x-4 py-8">
           <TextField
             sx={{ marginBottom: '8px' }}
             fullWidth
-            label="Название Ru"
+            label={`${t('createProduct.name')}(рус)`}
             value={nameRu}
             onChange={(e) => setNameRu(e.target.value)}
           />
           <TextField
             sx={{ marginBottom: '8px' }}
             fullWidth
-            label="Название Kz"
+            label={`${t('createProduct.name')}(қаз)`}
             value={nameKz}
             onChange={(e) => setNameKz(e.target.value)}
           />
@@ -78,7 +80,7 @@ const EditProductDialog = ({ open, handleClose, characteristic, handleEdit }) =>
             aria-label="minimum height"
             minRows={4}
             maxRows={8}
-            placeholder="Characteristics Ru"
+            placeholder={`${t('createProduct.characteristics')}(рус)`}
             style={{ width: '100%' }}
             value={characteristicsRu}
             onChange={(e) => setCharacteristicsRu(e.target.value)}
@@ -88,7 +90,7 @@ const EditProductDialog = ({ open, handleClose, characteristic, handleEdit }) =>
             aria-label="minimum height"
             minRows={4}
             maxRows={8}
-            placeholder="Characteristics Kz"
+            placeholder={`${t('createProduct.characteristics')}(қаз)`}
             style={{ width: '100%' }}
             value={characteristicsKz}
             onChange={(e) => setCharacteristicsKz(e.target.value)}
@@ -96,8 +98,8 @@ const EditProductDialog = ({ open, handleClose, characteristic, handleEdit }) =>
         </div>
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose}>Cancel</Button>
-        <Button onClick={edit}>Edit</Button>
+        <Button onClick={handleClose}>{t('actions.cancel')}</Button>
+        <Button onClick={edit}>{t('actions.edit')}</Button>
       </DialogActions>
     </Dialog>
   );
