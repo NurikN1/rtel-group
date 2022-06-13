@@ -22,7 +22,7 @@ const Tetra = () => {
               marginBottom: '16px',
             }}
             variant="h5"
-            className="text-green-800">
+            className="">
             {t('catalog.tetra-systems.title')}
           </Typography>
           <Typography variant="body1">{t('catalog.tetra-systems.body1')}</Typography>
@@ -38,11 +38,11 @@ const Tetra = () => {
         <Container>
           <Typography
             sx={{
-              marginBottom: '16px',
+              marginBottom: '32px',
               textAlign: 'center',
             }}
             variant="h5"
-            className="text-green-800">
+            className="">
             {t('catalog.tetra-systems.features.title')}
           </Typography>
           <div className="flex space-x-8 mb-8">

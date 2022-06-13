@@ -61,7 +61,7 @@ const CatalogDetail = () => {
           paddingY: '48px',
         }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-          TETRA СИСТЕМЫ
+          {t(`categories.${categoryName}`)}
         </Typography>
         <Container maxWidth="xl">
           <Divider variant="middle" />

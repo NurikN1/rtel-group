@@ -255,4 +255,11 @@ export const TRANSLATION_RU = {
         'Решение технических проблем 8/5 с помощью портала support.hytera.ru, помощь в настройке системы, регулярные обновления',
     },
   },
+  categories: {
+    'tetra-systems': 'TETRA системы',
+    'tetra-terminals': 'TETRA терминалы',
+    'poc-systems': 'Системы PoC',
+    'poc-terminals': 'Терминалы PoC',
+    'bda-systems': 'Система двунаправленных усилителей радиосигнала BDA',
+  },
 };

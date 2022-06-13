@@ -19,7 +19,7 @@ const CatalogItem = (props) => {
         sx={{
           justifySelf: 'center',
           '&:hover': {
-            color: 'success.main',
+            color: '',
           },
         }}>
         {props.name}

@@ -24,7 +24,7 @@ const PocSolutions = () => {
               marginBottom: '16px',
             }}
             variant="h5"
-            className="text-green-800">
+            className="">
             {t('catalog.poc-solutions.title')}
           </Typography>
           <Typography variant="body1">{t('catalog.poc-solutions.body1')}</Typography>
@@ -40,11 +40,11 @@ const PocSolutions = () => {
         <Container>
           <Typography
             sx={{
-              marginBottom: '16px',
+              marginBottom: '32px',
               textAlign: 'center',
             }}
             variant="h5"
-            className="text-green-800">
+            className="">
             {t('catalog.poc-solutions.features.title')}
           </Typography>
           <div className="flex space-x-8 mb-8">

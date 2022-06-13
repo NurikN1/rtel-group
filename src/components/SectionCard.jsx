@@ -15,7 +15,7 @@ const SectionCard = (props) => {
         align="center"
         sx={{
           '&:hover': {
-            color: 'success.main',
+            color: '#1f2937',
           },
         }}>
         {props.title}
