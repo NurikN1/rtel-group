@@ -146,4 +146,18 @@ export const TRANSLATION_KZ = {
     addressLocation: '115054, Қазақстан, Алматы қ., Бостандық Р., Гагарина 236',
     contacts: 'Байланыстар',
   },
+  projects: {
+    title: 'Жобалар',
+    equipments: 'Пайдаланылған жабдықтар',
+    solutions: 'Шешімдер',
+    addMarker: 'Белгі қосу',
+    editMarker: {
+      title: 'Маркер жасау',
+      name: 'Атауы',
+      coordinates: 'Координаталары',
+      longitude: 'Бойлық',
+      latitude: 'ендік',
+      submit: 'Сақтау',
+    },
+  },
 };

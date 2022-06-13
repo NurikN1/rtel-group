@@ -2,6 +2,7 @@ import { Button, Container, TextareaAutosize, TextField, Typography } from '@mui
 import { collection, doc, setDoc } from 'firebase/firestore/lite';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { db } from '../firebase';
 import { HeaderHeight } from '../variables/variables';
 
@@ -14,6 +15,8 @@ const CreateMarker = ({
   initialEquipmentsRu = '',
   initialEquipmentsKz = '',
 }) => {
+  const { t } = useTranslation();
+
   const { register, handleSubmit, reset } = useForm({
     defaultValues: {
       name: initialName,
@@ -92,39 +95,64 @@ const CreateMarker = ({
       <div className="mt-8">
         <Container maxWidth="md" sx={{ marginY: '16px' }}>
           <Typography variant="h5" align="center" sx={{ marginBottom: '16px' }}>
-            Создание маркера
+            {t('projects.editMarker.title')}
           </Typography>
         </Container>
         <Container maxWidth="md">
           <form ref={form} onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-4">
               <Typography variant="subtitle1" sx={{ marginBottom: '8px' }}>
-                Название:
+                {t('projects.editMarker.name')}:
               </Typography>
-              <TextField {...register('name')} fullWidth label="Название" id="lng" />
+              <TextField
+                {...register('name')}
+                fullWidth
+                label={t('projects.editMarker.name')}
+                id="lng"
+              />
             </div>
             <div className="mb-4">
               <Typography variant="subtitle1" sx={{ marginBottom: '8px' }}>
-                Координаты:
+                {t('projects.editMarker.coordinates')}:
               </Typography>
               <div className="flex space-x-4">
-                <TextField {...register('lng')} fullWidth label="Долгота" id="lng" />
-                <TextField {...register('lat')} fullWidth label="Широта" id="lat" />
+                <TextField
+                  {...register('lng')}
+                  fullWidth
+                  label={t('projects.editMarker.longitude')}
+                  id="lng"
+                />
+                <TextField
+                  {...register('lat')}
+                  fullWidth
+                  label={t('projects.editMarker.latitude')}
+                  id="lat"
+                />
               </div>
             </div>
             <div className="mb-4">
               <Typography variant="subtitle1" sx={{ marginBottom: '8px' }}>
-                Решения:
+                {t('projects.solutions')}:
               </Typography>
 
               <div className="flex space-x-4">
-                <TextField {...register('solutionRu')} fullWidth label="Ru" id="firstName" />
-                <TextField {...register('solutionKz')} fullWidth label="Kz" id="firstName" />
+                <TextField
+                  {...register('solutionRu')}
+                  fullWidth
+                  label={`${t('projects.solutions')}(рус)`}
+                  id="firstName"
+                />
+                <TextField
+                  {...register('solutionKz')}
+                  fullWidth
+                  label={`${t('projects.solutions')}(қаз)`}
+                  id="firstName"
+                />
               </div>
             </div>
             <div className="mb-4">
               <Typography variant="subtitle1" sx={{ marginBottom: '8px' }}>
-                Использованные оборудования:
+                {t('projects.equipments')}:
               </Typography>
 
               <div className="flex space-x-4">
@@ -133,7 +161,7 @@ const CreateMarker = ({
                   className="p-2 w-full border border-gray-300 rounded-lg"
                   aria-label="minimum height"
                   minRows={2}
-                  placeholder="Equipment Ru"
+                  placeholder={`${t('projects.equipments')}(рус)`}
                   style={{ width: '100%' }}
                 />
                 <TextareaAutosize
@@ -141,7 +169,7 @@ const CreateMarker = ({
                   className="p-2 w-full border border-gray-300 rounded-lg"
                   aria-label="minimum height"
                   minRows={2}
-                  placeholder="Equipment Kz"
+                  placeholder={`${t('projects.equipments')}(қаз)`}
                   style={{ width: '100%' }}
                 />
               </div>
@@ -159,7 +187,7 @@ const CreateMarker = ({
                     opacity: 0.9,
                   },
                 }}>
-                Submit
+                {t('projects.editMarker.submit')}
               </Button>
             </div>
           </form>

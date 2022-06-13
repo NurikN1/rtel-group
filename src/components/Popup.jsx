@@ -2,11 +2,14 @@ import { Button, IconButton } from '@mui/material';
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
+import { useTranslation } from 'react-i18next';
 
 const Popup = ({ marker, language, isAuthorized, handleDeleteMarker }) => {
+  const { t, i18n } = useTranslation();
+
   return (
     <div>
-      <h4 className="text-base text-gray-800">Использованные оборудования:</h4>
+      <h4 className="text-base text-gray-800">{t('projects.equipments')}:</h4>
       <ul>
         {marker[`equipments_${language}`].map((equipment) => (
           <li key={equipment.text}>
@@ -20,7 +23,7 @@ const Popup = ({ marker, language, isAuthorized, handleDeleteMarker }) => {
           </li>
         ))}
       </ul>
-      <h4 className="text-base text-gray-800">Решения:</h4>
+      <h4 className="text-base text-gray-800">{t('projects.solutions')}:</h4>
       <a
         href={marker[`solution_${language}`].link}
         className="text-blue-800 hover:underline outline-none"

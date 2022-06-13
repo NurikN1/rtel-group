@@ -145,4 +145,18 @@ export const TRANSLATION_RU = {
     addressLocation: '115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236',
     contacts: 'Контакты',
   },
+  projects: {
+    title: 'Проекты',
+    equipments: 'Использованные оборудования',
+    solutions: 'Решения',
+    addMarker: 'Добавить метку',
+    editMarker: {
+      title: 'Создание маркера ',
+      name: 'Название',
+      coordinates: 'Координаты',
+      longitude: 'Долгота',
+      latitude: 'широта',
+      submit: 'Сохранить',
+    },
+  },
 };

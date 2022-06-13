@@ -87,7 +87,7 @@ const Projects = () => {
           paddingY: '32px',
         }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-          Проекты
+          {t('projects.title')}
         </Typography>
         <Container maxWidth="xl">
           <Divider variant="middle" />
@@ -100,7 +100,7 @@ const Projects = () => {
         {isAuthorized && (
           <div className="flex justify-end">
             <Button>
-              <Link to="/create-marker">Добавить метку</Link>
+              <Link to="/create-marker">{t('projects.addMarker')}</Link>
             </Button>
           </div>
         )}
