@@ -9,9 +9,12 @@ import {
 } from '@mui/material';
 import { useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { HeaderHeight } from '../variables/variables';
 
 const TechSupport = () => {
+  const { t } = useTranslation();
+
   const { register, handleSubmit } = useForm();
   const form = useRef();
 
@@ -30,7 +33,7 @@ const TechSupport = () => {
           paddingY: '32px',
         }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-          Техническая поддержка
+          {t('techSupport.title')}
         </Typography>
         <Container maxWidth="xl">
           <Divider variant="middle" />
@@ -39,40 +42,36 @@ const TechSupport = () => {
       <Container maxWidth="sm">
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            <TextField {...register('firstName')} fullWidth label="Имя" id="firstName" />
-          </div>
-          <div className="mb-4">
-            <TextField {...register('lastName')} fullWidth label="Фамилия" id="lastName" />
+            <TextField {...register('fio')} fullWidth label={t('techSupport.fio')} id="fio" />
           </div>
           <div className="mb-4">
             <TextField
               {...register('email')}
               fullWidth
-              label="Адрес электронной почты "
+              label={t('techSupport.email')}
               id="email"
               type="email"
             />
           </div>
           <div className="mb-4">
-            <TextField {...register('company')} fullWidth label="Компания" id="company" />
+            <TextField
+              {...register('company')}
+              fullWidth
+              label={t('techSupport.company')}
+              id="company"
+            />
           </div>
           <div className="mb-4">
-            <TextField {...register('position')} fullWidth label="Должность" id="position" />
+            <TextField {...register('name')} fullWidth label={t('techSupport.name')} id="name" />
           </div>
           <div className="mb-4">
-            <TextField {...register('region')} fullWidth label="Область (РК)" id="region" />
-          </div>
-          <div className="mb-4">
-            <TextField {...register('phoneNumber')} fullWidth label="Телефон" id="phoneNumber" />
-          </div>
-          <div className="mb-4">
-            <Typography>Описание</Typography>
+            <Typography>{t('techSupport.description')}</Typography>
             <TextareaAutosize
               {...register('descripton')}
               className="p-2 w-full border border-gray-300 rounded-lg"
               aria-label="minimum height"
               minRows={3}
-              placeholder="Описание"
+              placeholder={t('techSupport.description')}
               style={{ width: '100%' }}
             />
           </div>
@@ -88,7 +87,7 @@ const TechSupport = () => {
                   opacity: 0.9,
                 },
               }}>
-              Отправить
+              {t('techSupport.send')}
             </Button>
           </div>
         </form>

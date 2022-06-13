@@ -46,7 +46,7 @@ const Contacts = () => {
               {t('contacts.phone')}: +7 (495) 669-68-90
             </Typography>
             <Typography variant="body2" sx={{ marginBottom: '8px' }}>
-              {t('contacts.email')}: будет@gmail.kz
+              {t('contacts.email')}: info@rtel.kz
             </Typography>
             <Button variant="contained">{t('contacts.contactUs')}</Button>
             {/* <Typography variant="subtitle1" sx={{ marginBottom: '16px' }}>

@@ -3,18 +3,54 @@ import {
   Button,
   Container,
   Divider,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
   TextareaAutosize,
   TextField,
   Typography,
 } from '@mui/material';
 import { useForm } from 'react-hook-form';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { HeaderHeight } from '../variables/variables';
+import { useTranslation } from 'react-i18next';
+
+const INDUSTRIES = [
+  {
+    name: 'Utilities & Energy',
+    value: 'utilities',
+  },
+  {
+    name: 'Industrial & Commercial',
+    value: 'industrial',
+  },
+  {
+    name: 'Transportation',
+    value: 'transportations',
+  },
+  {
+    name: 'Emergency Response',
+    value: 'emergency-response',
+  },
+  {
+    name: 'Public Safety',
+    value: 'public-safety',
+  },
+  {
+    name: 'Others',
+    value: 'others',
+  },
+];
 
 const Feedback = () => {
+  const { t } = useTranslation();
+
   const { register, handleSubmit } = useForm();
   const form = useRef();
+
+  const [industryName, setIndustryName] = useState('');
 
   const onSubmit = (data) => {
     console.log(data);
@@ -39,7 +75,7 @@ const Feedback = () => {
           paddingY: '32px',
         }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-          Форма обратной связи
+          {t('feedback.title')}
         </Typography>
         <Container maxWidth="xl">
           <Divider variant="middle" />
@@ -48,40 +84,77 @@ const Feedback = () => {
       <Container maxWidth="sm">
         <form ref={form} onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-4">
-            <TextField {...register('firstName')} fullWidth label="Имя" id="firstName" />
+            <TextField
+              {...register('firstName')}
+              fullWidth
+              label={t('feedback.name')}
+              id="firstName"
+            />
           </div>
           <div className="mb-4">
-            <TextField {...register('lastName')} fullWidth label="Фамилия" id="lastName" />
+            <TextField
+              {...register('lastName')}
+              fullWidth
+              label={t('feedback.lastName')}
+              id="lastName"
+            />
           </div>
           <div className="mb-4">
             <TextField
               {...register('email')}
               fullWidth
-              label="Адрес электронной почты "
+              label={t('feedback.email')}
               id="email"
               type="email"
             />
           </div>
           <div className="mb-4">
-            <TextField {...register('company')} fullWidth label="Компания" id="company" />
+            <TextField
+              {...register('company')}
+              fullWidth
+              label={t('feedback.company')}
+              id="company"
+            />
           </div>
           <div className="mb-4">
             <TextField {...register('position')} fullWidth label="Должность" id="position" />
           </div>
-          <div className="mb-4">
-            <TextField {...register('region')} fullWidth label="Область (РК)" id="region" />
+          <div>
+            <FormControl fullWidth sx={{ marginBottom: '16px' }}>
+              <InputLabel id="demo-multiple-name-label">{t('feedback.industry')}</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={industryName}
+                label={t('feedback.industry')}
+                onChange={(e) => setIndustryName(e.target.value)}>
+                {INDUSTRIES.map((industry) => (
+                  <MenuItem value={industry.value} key={industry.value}>
+                    {industry.name}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
           </div>
           <div className="mb-4">
-            <TextField {...register('phoneNumber')} fullWidth label="Телефон" id="phoneNumber" />
+            <TextField {...register('region')} fullWidth label={t('feedback.region')} id="region" />
           </div>
           <div className="mb-4">
-            <Typography>Описание</Typography>
+            <TextField
+              {...register('phoneNumber')}
+              fullWidth
+              label={t('feedback.phone')}
+              id="phoneNumber"
+            />
+          </div>
+          <div className="mb-4">
+            <Typography>{t('feedback.description')}</Typography>
             <TextareaAutosize
               {...register('descripton')}
               className="p-2 w-full border border-gray-300 rounded-lg"
               aria-label="minimum height"
               minRows={3}
-              placeholder="Описание"
+              placeholder={t('feedback.description')}
               style={{ width: '100%' }}
             />
           </div>
@@ -97,7 +170,7 @@ const Feedback = () => {
                   opacity: 0.9,
                 },
               }}>
-              Submit
+              {t('feedback.submit')}
             </Button>
           </div>
         </form>

@@ -44,7 +44,7 @@ const Footer = () => {
           <div>
             <h5 className="mb-4 text-lg font-medium text-white">{t('footer.contacts')}</h5>
             <ul>
-              <li className="mb-2 text-gray-400">+7 (495) 669-68-90 </li>
+              <li className="mb-2 text-gray-400">+7 707 812 6590</li>
               {/* <li className="mb-2 text-gray-400">+7 (495) 901-15-20</li>
               <li className="mb-2 text-gray-400">+7 (495) 901-15-20</li> */}
             </ul>
