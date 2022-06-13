@@ -1,7 +1,10 @@
 import { Box, Button, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const CatalogItem = (props) => {
+  const { t } = useTranslation();
+
   return (
     <Link
       to={props.linkTo}
@@ -34,7 +37,7 @@ const CatalogItem = (props) => {
             opacity: 0.9,
           },
         }}>
-        Подробнее
+        {t('solutions.moreInfo')}
       </Button>
     </Link>
   );

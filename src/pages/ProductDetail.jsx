@@ -174,10 +174,10 @@ const ProductDetail = () => {
           }}>
           <div className="px-4 flex justify-end space-x-8">
             <Button variant="contained" color="success">
-              <Link to={`/edit/${categoryId}/${productId}`}>Редактировать</Link>
+              <Link to={`/edit/${categoryId}/${productId}`}>{t('actions.edit')}</Link>
             </Button>
             <Button variant="contained" color="error" onClick={removeProduct}>
-              Удалить
+              {t('actions.remove')}
             </Button>
           </div>
         </Container>

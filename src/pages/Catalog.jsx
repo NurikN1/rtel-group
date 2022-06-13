@@ -3,8 +3,11 @@ import CatalogItem from '../components/CatalogItem';
 import { ReactComponent as TetraIcon } from '../assets/icons/tetra.svg';
 import { ReactComponent as PocIcon } from '../assets/icons/poc.svg';
 import { HeaderHeight } from '../variables/variables';
+import { useTranslation } from 'react-i18next';
 
 const Catalog = () => {
+  const { t } = useTranslation();
+
   return (
     <Container
       maxWidth="xl"
@@ -16,7 +19,7 @@ const Catalog = () => {
           paddingY: '48px',
         }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-          КАТАЛОГ ПРОДУКЦИИ
+          {t('catalog.title')}
         </Typography>
         <Divider
           variant="inset"
@@ -33,12 +36,12 @@ const Catalog = () => {
           }}>
           <CatalogItem
             icon={<TetraIcon height="70" />}
-            name="DMR системы и терминалы"
+            name={t('catalog.tetra-systems.title')}
             linkTo="/catalog/tetra"
           />
           <CatalogItem
             icon={<PocIcon height="70" fill="black" />}
-            name="PoC-решения для оперативной связи поверх сети сотового оператора"
+            name={t('catalog.poc-solutions.title')}
             linkTo="/catalog/poc-solutions"
           />
         </Box>

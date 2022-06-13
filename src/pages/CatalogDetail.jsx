@@ -102,7 +102,7 @@ const CatalogDetail = () => {
                     opacity: 0.9,
                   },
                 }}>
-                <Link to="/create">Добавить новый</Link>
+                <Link to="/create">{t('actions.addNew')}</Link>
               </Button>
             </div>
           </Container>

@@ -117,7 +117,12 @@ const Feedback = () => {
             />
           </div>
           <div className="mb-4">
-            <TextField {...register('position')} fullWidth label="Должность" id="position" />
+            <TextField
+              {...register('position')}
+              fullWidth
+              label={t('feedback.position')}
+              id="position"
+            />
           </div>
           <div>
             <FormControl fullWidth sx={{ marginBottom: '16px' }}>

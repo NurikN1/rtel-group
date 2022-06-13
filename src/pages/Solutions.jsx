@@ -87,7 +87,7 @@ const Solutions = () => {
                         opacity: 0.9,
                       },
                     }}>
-                    Подробнее
+                    {t('solutions.moreInfo')}
                   </Button>
                 </Link>
               </div>
@@ -118,7 +118,7 @@ const Solutions = () => {
                         opacity: 0.9,
                       },
                     }}>
-                    Подробнее
+                    {t('solutions.moreInfo')}
                   </Button>
                 </Link>
               </div>

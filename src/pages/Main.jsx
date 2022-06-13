@@ -70,8 +70,8 @@ const Main = () => {
           <h3 className="text-4xl text-black font-bold leading-none text-center mb-3">
             {t('main.about.title')}
           </h3>
-          <p className="text-gray-800 text-xl indent-8">{t('main.about.body1')}</p>
-          <p className="text-gray-800 text-xl mb-8 indent-8">{t('main.about.body2')}</p>
+          <p className="text-gray-800 text-xl indent-8 text-center">{t('main.about.body1')}</p>
+          <p className="text-gray-800 text-xl mb-8 indent-8 text-center">{t('main.about.body2')}</p>
           {/* <div className="w-full sm:w-1/2 p-6">
             <img
               src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
@@ -85,8 +85,7 @@ const Main = () => {
               Rtel Group участвует в модернизации и развитии цифровой связи в Казахстане
             </Typography> */}
             <h3 className="text-3xl text-black font-bold leading-none mb-8 text-center">
-              Rtel Group участвует в модернизации и развитии цифровой связи в Казахстане с
-              партнерами
+              {t('main.partnerTitle')}
             </h3>
           </div>
           <div>

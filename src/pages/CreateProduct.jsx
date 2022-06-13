@@ -193,7 +193,7 @@ const CreateProduct = ({
       }}>
       <Container maxWidth="md" sx={{ marginY: '16px' }}>
         <Typography variant="h5" align="center" sx={{ marginBottom: '16px' }}>
-          Создание продукта
+          {t('createProduct.title')}
         </Typography>
 
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
