@@ -159,4 +159,9 @@ export const TRANSLATION_RU = {
       submit: 'Сохранить',
     },
   },
+  solutions: {
+    title: 'Решения',
+    moreInfo: 'Подробнее',
+    download: 'Скачать презентацию',
+  },
 };

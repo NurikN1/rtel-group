@@ -1,9 +1,12 @@
 import { Typography } from '@mui/material';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import { SOLUTIONS } from '../mock/solutions';
 
 const SolutionDetail = () => {
+  const { t } = useTranslation();
+
   const params = useParams();
   const navigate = useNavigate();
   const solution = SOLUTIONS.find((solution) => solution.name === params.solutionName);
@@ -35,7 +38,7 @@ const SolutionDetail = () => {
           download
           target="_blank"
           rel="noreferrer">
-          Скачать презентацию
+          {t('solutions.download')}
         </a>
       </div>
     </div>

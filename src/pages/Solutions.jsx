@@ -7,8 +7,11 @@ import { Box } from '@mui/system';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { useTranslation } from 'react-i18next';
 
 const Solutions = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       style={{
@@ -20,7 +23,7 @@ const Solutions = () => {
           paddingY: '32px',
         }}>
         <Typography variant="h4" align="center" sx={{ marginBottom: '16px' }}>
-          Решения
+          {t('solutions.title')}
         </Typography>
         <Container maxWidth="xl">
           <Divider variant="middle" />
@@ -53,7 +56,7 @@ const Solutions = () => {
                         opacity: 0.9,
                       },
                     }}>
-                    Подробнее
+                    {t('solutions.moreInfo')}
                   </Button>
                 </Link>
               </div>

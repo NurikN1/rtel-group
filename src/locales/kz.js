@@ -160,4 +160,9 @@ export const TRANSLATION_KZ = {
       submit: 'Сақтау',
     },
   },
+  solutions: {
+    title: 'Шешімдер',
+    moreInfo: 'Толығырақ',
+    download: 'Презентацияны жүктеу',
+  },
 };
