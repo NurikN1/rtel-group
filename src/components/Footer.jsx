@@ -1,8 +1,11 @@
 import { Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-8 bg-gray-800">
       <div className="flex justify-between container mx-auto">
@@ -17,31 +20,29 @@ const Footer = () => {
             <ul>
               <li className="mb-2">
                 <Link className=" text-gray-400" to="/projects">
-                  Проекты
+                  {t('footer.projects')}
                 </Link>
               </li>
               <li className="mb-2">
                 <Link className=" text-gray-400" to="/solutions">
-                  Решения
+                  {t('footer.solutions')}
                 </Link>
               </li>
               <li className="mb-2">
                 <Link className=" text-gray-400" to="/catalog">
-                  Каталог продукции
+                  {t('footer.catalog')}
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h5 className="mb-4 text-lg font-medium text-white">Адрес</h5>
+            <h5 className="mb-4 text-lg font-medium text-white">{t('footer.address')}</h5>
             <ul className=" max-w-[240px]">
-              <li className="mb-2 text-gray-400">
-                115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236
-              </li>
+              <li className="mb-2 text-gray-400">{t('footer.addressLocation')}</li>
             </ul>
           </div>
           <div>
-            <h5 className="mb-4 text-lg font-medium text-white">Контакты</h5>
+            <h5 className="mb-4 text-lg font-medium text-white">{t('footer.contacts')}</h5>
             <ul>
               <li className="mb-2 text-gray-400">+7 (495) 669-68-90 </li>
               {/* <li className="mb-2 text-gray-400">+7 (495) 901-15-20</li>

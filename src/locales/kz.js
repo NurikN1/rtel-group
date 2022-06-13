@@ -127,4 +127,12 @@ export const TRANSLATION_KZ = {
     email: 'Email',
     contactUs: 'Бізбен хабарласыңыз',
   },
+  footer: {
+    projects: 'Жобалар',
+    solutions: 'Шешімдер',
+    catalog: 'Өнім каталогы',
+    address: 'МЕКЕН-ЖАЙЫ',
+    addressLocation: '115054, Қазақстан, Алматы қ., Бостандық Р., Гагарина 236',
+    contacts: 'Байланыстар',
+  },
 };

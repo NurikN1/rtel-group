@@ -127,4 +127,12 @@ export const TRANSLATION_RU = {
     email: 'Email',
     contactUs: 'Связаться с нами',
   },
+  footer: {
+    projects: 'Проекты',
+    solutions: 'Решения',
+    catalog: 'Каталог продукции',
+    address: 'Адрес',
+    addressLocation: '115054, Казахстан, г. Алматы, Бостандыкский р., Гагарина 236',
+    contacts: 'Контакты',
+  },
 };
