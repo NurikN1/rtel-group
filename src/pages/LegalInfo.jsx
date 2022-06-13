@@ -1,7 +1,10 @@
 import { Divider, Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import { HeaderHeight } from '../variables/variables';
 
 const LegalInfo = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       style={{
@@ -10,7 +13,7 @@ const LegalInfo = () => {
       <div className="container mx-auto py-12">
         <div className="mb-6">
           <Typography variant="h4" align="center">
-            ЮРИДИЧЕСКАЯ ИНФОРМАЦИЯ
+            {t('legalInfo.title')}
           </Typography>
           <Divider />
         </div>
@@ -19,22 +22,19 @@ const LegalInfo = () => {
             ТОО «RTel Group»
           </Typography>
           <ul>
-            <li>
-              Юридический и фактический адрес: Казахстан, город Алматы, пр. Гагарина 236, офис 333.
-            </li>
-            <li>БИН: 190540023767</li>
-            <li>61209 – ОКЭД. Прочая беспроводная телекоммуникационная связь</li>
+            <li>{t('legalInfo.address')}</li>
+            <li>{t('legalInfo.bin')}</li>
+            <li>{t('legalInfo.connection')}</li>
           </ul>
         </div>
         <div className="mb-6">
           <Typography variant="h6" sx={{ marginBottom: '16px' }}>
-            В Филиале АО «Forte Bank» в г. Алматы, БИК IRTYKZKA, KZ1496502F0011231710 В г. Алматы,
-            пр. Нурсултан Назарбаев, д 100. (основной счет)
+            {t('legalInfo.filial')}
           </Typography>
           <ul>
-            <li>Свидетельство о постановке на НДС серия 60001 №1221992от 25.06.2021г.</li>
-            <li>Директор: Молдасанов Едиль Серикбекович, действующий на основании Устава</li>
-            <li className=" font-bold">Почта: YM@rtel.kz</li>
+            <li>{t('legalInfo.nds')}</li>
+            <li>{t('legalInfo.director')}</li>
+            <li className=" font-bold">{t('legalInfo.email')}</li>
           </ul>
         </div>
       </div>
