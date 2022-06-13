@@ -35,6 +35,7 @@ export const TRANSLATION_RU = {
     },
     partnerTitle:
       'Rtel Group участвует в модернизации и развитии цифровой связи в Казахстане с партнерами',
+    group1520: 'Группа компаний 1520',
   },
   catalog: {
     title: 'Каталог продукции',

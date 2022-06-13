@@ -26,7 +26,7 @@ const Main = () => {
         <div className="w-full mb-4">
           <div className="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
         </div>
-        <Container maxWidth="xl" sx={{ marginBottom: '48px' }}>
+        <Container maxWidth="xl" sx={{ marginBottom: '64px' }}>
           <Swiper
             autoplay={{
               delay: 2500,
@@ -66,8 +66,8 @@ const Main = () => {
             </SwiperSlide>
           </Swiper>
         </Container>
-        <div className="mb-8">
-          <h3 className="text-4xl text-black font-bold leading-none text-center mb-3">
+        <div className="mb-16">
+          <h3 className="text-6xl text-black font-bold leading-none text-center mb-8">
             {t('main.about.title')}
           </h3>
           <p className="text-gray-800 text-xl indent-8 text-center">{t('main.about.body1')}</p>
@@ -119,7 +119,7 @@ const Main = () => {
                   />
                 </a>
                 <Typography align="center" variant="subtitle1">
-                  Группа компаний 1520
+                  {t('main.group1520')}
                 </Typography>
               </li>
               <li className="w-1/3">
