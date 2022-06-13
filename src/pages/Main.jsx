@@ -41,7 +41,7 @@ const Main = () => {
               <div className="flex justify-center items-center w-full h-full bg-cover bg-no-repeat slider1">
                 <div>
                   <Typography variant="h4" className="text-white" sx={{ marginBottom: '16px' }}>
-                    Всегда на связи
+                    {t('main.carousel.beOnConnect')}
                   </Typography>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const Main = () => {
               <div className="flex justify-center items-center w-full h-full bg-cover bg-no-repeat slider2">
                 <div>
                   <Typography variant="h4" className="text-white" sx={{ marginBottom: '16px' }}>
-                    Профессиональная оперативная связь будущего
+                    {t('main.carousel.futureConnection')}
                   </Typography>
                 </div>
               </div>
@@ -59,28 +59,26 @@ const Main = () => {
               <div className="flex justify-center items-center w-full h-full bg-cover bg-no-repeat slider3">
                 <div>
                   <Typography variant="h4" className="text-white" sx={{ marginBottom: '16px' }}>
-                    RTEL - больше чем просто компания
+                    {t('main.carousel.notOnlyCompany')}
                   </Typography>
                 </div>
               </div>
             </SwiperSlide>
           </Swiper>
         </Container>
-        {/* <div className="flex flex-wrap mb-8">
-          <div className="w-5/6 sm:w-1/2 p-6">
-            <h3 className="text-3xl text-black font-bold leading-none text-center mb-3">
-              {t('main.about.title')}
-            </h3>
-            <p className="text-gray-800 indent-8">{t('main.about.body1')}</p>
-            <p className="text-gray-800 mb-8 indent-8">{t('main.about.body2')}</p>
-          </div>
-          <div className="w-full sm:w-1/2 p-6">
+        <div className="mb-8">
+          <h3 className="text-4xl text-black font-bold leading-none text-center mb-3">
+            {t('main.about.title')}
+          </h3>
+          <p className="text-gray-800 text-xl indent-8">{t('main.about.body1')}</p>
+          <p className="text-gray-800 text-xl mb-8 indent-8">{t('main.about.body2')}</p>
+          {/* <div className="w-full sm:w-1/2 p-6">
             <img
               src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80"
               alt="Company Img"
             />
-          </div>
-        </div> */}
+          </div> */}
+        </div>
         <div>
           <div className="align-middle">
             {/* <Typography align="center" variant="h5" sx={{ marginBottom: '16px' }}>

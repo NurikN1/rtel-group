@@ -23,11 +23,11 @@ const TopBar = () => {
           <ul>
             {isAuthorized ? (
               <button to="/" className="text-white" onClick={() => dispatch(logout())}>
-                Выйти
+                {t('navbar.logout')}
               </button>
             ) : (
               <Link to="/login" className="text-white">
-                Войти
+                {t('navbar.login')}
               </Link>
             )}
           </ul>

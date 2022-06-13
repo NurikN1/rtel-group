@@ -36,7 +36,7 @@ const Navbar = () => {
               className="flex flex-col items-center text-xl font-medium text-white"
               variant="h6">
               <img src={logo} alt="Logo" height={36} className="h-[36px]" />
-              <Typography variant="caption">Оператор профессиональной радиосвязи</Typography>
+              <Typography variant="caption">{t('navbar.operator')}</Typography>
             </Link>
           </div>
           <ul className="flex items-center space-x-8">
