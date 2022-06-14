@@ -30,7 +30,7 @@ const SolutionDetail = () => {
             'url("https://www.hytera.ru/upload/resize_cache/webp/iblock/76d/76db6bbf5dfba0d15776dbaa0e8ce5a1.webp")',
         }}>
         <Typography variant="h3" className="text-white" sx={{ marginBottom: '16px' }}>
-          {solution.title}
+          {t(solution.title)}
         </Typography>
         <a
           className="py-2 px-6 text-lg text-white bg-gray-800 rounded-lg cursor-pointer"

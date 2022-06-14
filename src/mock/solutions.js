@@ -16,7 +16,7 @@ export const SOLUTIONS = [
   },
   {
     name: 'results',
-    title: 'Итоги работ',
+    title: 'navbar.links.Итоги работ',
     filePath: '/rtel-group/files/results.pdf',
   },
 ];
