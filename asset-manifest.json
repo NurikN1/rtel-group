@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/rtel-group/static/css/main.ca8bc630.css",
-    "main.js": "/rtel-group/static/js/main.217c6336.js",
+    "main.js": "/rtel-group/static/js/main.038026ed.js",
     "static/media/vsegda-na-svazi.jpg": "/rtel-group/static/media/vsegda-na-svazi.cd9b240589a1196e942f.jpg",
     "static/media/rtel-bolshe-chem-prosto-comp.jpg": "/rtel-group/static/media/rtel-bolshe-chem-prosto-comp.51db8c184bd329fef917.jpg",
     "static/media/1520.png": "/rtel-group/static/media/1520.2c87b37ee78980fcde5f.png",
@@ -17,10 +17,10 @@
     "index.html": "/rtel-group/index.html",
     "static/media/ru.svg": "/rtel-group/static/media/ru.bfcf78f5e1dbe82b6947506aa4765577.svg",
     "main.ca8bc630.css.map": "/rtel-group/static/css/main.ca8bc630.css.map",
-    "main.217c6336.js.map": "/rtel-group/static/js/main.217c6336.js.map"
+    "main.038026ed.js.map": "/rtel-group/static/js/main.038026ed.js.map"
   },
   "entrypoints": [
     "static/css/main.ca8bc630.css",
-    "static/js/main.217c6336.js"
+    "static/js/main.038026ed.js"
   ]
 }
